@@ -108,12 +108,12 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 
 ## Results (Sample)
 
-| Metric      | Value         |
-|-------------|---------------|
-| Dice Score  | _Coming Soon_ |
-| IoU         | _Coming Soon_ |
-| Sensitivity | _Coming Soon_ |
-| Specificity | _Coming Soon_ |
+| Metric  | Value |
+|------   |-------|
+| DSC %   |  86.9 |
+| IoU %   |  80.5 |
+| PPV %   |  87.6 |
+
 
 ---
 

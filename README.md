@@ -44,7 +44,7 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 ## Pipeline Steps
 
 ### 1. Data Preprocessing  
-📄 `1_dataprep_&_preprocessing.ipynb`
+ `1_dataprep_&_preprocessing.ipynb`
 
 - Loads `SUB2.npy` volumes and their corresponding labels
 - Normalizes intensities
@@ -54,7 +54,7 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 ---
 
 ### 2. Model Training  
-📄 `2_training.ipynb`
+ `2_training.ipynb`
 
 - Implements 3D nnU-Net using PyTorch
 - Trains model on preprocessed data
@@ -63,7 +63,7 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 ---
 
 ### 3. Inference  
-📄 `3_inference.ipynb`
+ `3_inference.ipynb`
 
 - Loads trained model
 - Predicts tumor masks on test samples
@@ -71,3 +71,15 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 
 ---
 
+### 4. Postprocessing & Evaluation  
+ `4_postprocessing_visualization_evaluation.ipynb`
+
+- Applies connected component filtering to clean predictions
+- Computes:
+  - Dice Score
+  - Intersection over Union (IoU)
+  - Sensitivity
+  - Specificity
+- Visualizes:
+  - Ground truth vs predicted masks
+  - Overlay on original slices

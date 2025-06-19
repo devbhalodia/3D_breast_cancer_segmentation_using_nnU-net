@@ -16,4 +16,58 @@ This repository presents a complete deep learning pipeline for **3D breast cance
 └── README.md
 
 ```
-##  Dataset
+## Dataset: BreastDM
+
+- **Patients**: 262
+- **Modalities** per patient:
+  - `SUB2.npy`: Subtraction image (used for model training)
+  - `VIBRANT.npy`, `VIBRANT+C2.npy`: Not used in this project
+- **Format**: 3D `.npy` volumes of shape `(H, W, D)`
+- **Mask**: Binary ground truth masks for tumor regions
+- **Data Splits**: `train/`, `val/`, and `test/` (each with `images/` and `labels/` subfolders)
+
+> Input tensors are padded and reshaped to fixed shapes like `(8, 3, 369, 369)` or `(6, 3, 369, 369)`.
+
+---
+
+## Model Overview: nnU-Net (3D)
+
+The model is a 3D implementation of the popular nnU-Net framework. Key features:
+
+- Fully convolutional 3D segmentation architecture
+- Automatic adaptation to patch sizes and resolution
+- Works directly on 3D MRI volumes (`SUB2.npy`)
+- Postprocessing pipeline to enhance segmentation quality
+
+---
+
+## Pipeline Steps
+
+### 1. Data Preprocessing  
+📄 `1_dataprep_&_preprocessing.ipynb`
+
+- Loads `SUB2.npy` volumes and their corresponding labels
+- Normalizes intensities
+- Pads volumes to consistent shape
+- Saves preprocessed volumes to disk for model input
+
+---
+
+### 2. Model Training  
+📄 `2_training.ipynb`
+
+- Implements 3D nnU-Net using PyTorch
+- Trains model on preprocessed data
+- Logs metrics and saves checkpoints to Drive
+
+---
+
+### 3. Inference  
+📄 `3_inference.ipynb`
+
+- Loads trained model
+- Predicts tumor masks on test samples
+- Saves predictions to disk
+
+---
+

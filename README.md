@@ -103,3 +103,40 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 - Visualizes:
   - Ground truth vs predicted masks
   - Overlay on original slices
+
+---
+
+## Results (Sample)
+
+| Metric      | Value         |
+|-------------|---------------|
+| Dice Score  | _Coming Soon_ |
+| IoU         | _Coming Soon_ |
+| Sensitivity | _Coming Soon_ |
+| Specificity | _Coming Soon_ |
+
+---
+
+## Requirements
+
+- Python 3.9+
+- PyTorch 1.12+
+- NumPy
+- Matplotlib
+- Scikit-learn
+- nibabel *(if working with NIfTI files)*
+- Jupyter Notebook
+
+Install dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Then access data like:
+!ls /content/drive/MyDrive/path_to_your_data
+```

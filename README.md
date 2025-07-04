@@ -47,7 +47,7 @@ Contents include:
 - **Mask**: Binary ground truth masks for tumor regions
 - **Data Splits**: `train/`, `val/`, and `test/` (each with `images/` and `labels/` subfolders)
 
-> Input tensors are padded and reshaped to fixed shapes like `(8, 3, 369, 369)` or `(6, 3, 369, 369)`.
+> Input tensors are padded and reshaped to fixed shapes like `(8, 3, 369, 369)`
 
 ---
 
@@ -57,7 +57,7 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 
 - Fully convolutional 3D segmentation architecture
 - Automatic adaptation to patch sizes and resolution
-- Works directly on 3D MRI volumes (`SUB2.npy`)
+- Works directly on 3D MRI volumes 
 - Postprocessing pipeline to enhance segmentation quality
 
 ---
@@ -67,7 +67,7 @@ The model is a 3D implementation of the popular nnU-Net framework. Key features:
 ### 1. Data Preprocessing  
  `1_dataprep_&_preprocessing.ipynb`
 
-- Loads `SUB2.npy` volumes and their corresponding labels
+- Loads all 3 modality volumes and their corresponding labels
 - Normalizes intensities
 - Pads volumes to consistent shape
 - Saves preprocessed volumes to disk for model input

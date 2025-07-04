@@ -40,8 +40,9 @@ Contents include:
 
 - **Patients**: 262
 - **Modalities** per patient:
-  - `SUB2.npy`: Subtraction image (used for model training)
-  - `VIBRANT.npy`, `VIBRANT+C2.npy`: Not used in this project
+  - `SUB2.npy`
+  - `VIBRANT.npy`,
+  - `VIBRANT+C2.npy`
 - **Format**: 3D `.npy` volumes of shape `(H, W, D)`
 - **Mask**: Binary ground truth masks for tumor regions
 - **Data Splits**: `train/`, `val/`, and `test/` (each with `images/` and `labels/` subfolders)
